@@ -4,11 +4,11 @@ Chen Liang, Suresh Gandhi
 Many human-computer interaction techniques - such as mouse and user interfaces - are designed in 2D space. While this could be an easy and intuitive way to interact, a drawback of this design idea is the increasing difficulty of interacting as more and more windows are opened. This project proposed an idea to mitigate this issue: several force sensors are attached to the bottom of the mouse to provide an additional degree of freedom. Some user interfaces are also brought to '3D' space to utilize the much expanded space. The aim is to increase the interaction efficiency and provide more space for storing user interfaces, while keep everything easy to use and reduce the cost of learning for users. By doing so, user could still interact in a familiar way with similar user interfaces, with just a minor change.
 <div style="text-align:center">
   <img src="https://liangch0505.github.io/images/c667_Motivation1.png" />
-</div>.
+</div>
 <div style="text-align:center">
   <img src="https://liangch0505.github.io/images/c667_Motivation2.png" /><br>
   <i>When too many windows opened, it's very hard to select the one you want, or interact between two different windows.</i>
-</div>.
+</div>
 ## Characteristics
 <b>Low learning cost: </b>  No fancy 3D effect. No additional interaction devices. User still uses mouse to interact with similar user interfaces, just have to press the mouse and realize that interfaces are stacked together.
 <b>Low deployment cost: </b> Each sensor costs $2 only. Software can be directly used on Windows systems.
@@ -19,7 +19,7 @@ Many human-computer interaction techniques - such as mouse and user interfaces -
 <div style="text-align:center">
   <img src="https://liangch0505.github.io/images/c667_Circuit.png" /><br>
   <i>Detailed Circuit: four force sensors are in the top of the figure.</i>
-</div>. 
+</div>
 ## Software Implementation Detail
 Two software applications are created:
 ### Stacked Windows
@@ -28,9 +28,10 @@ This program supports 4 different switching mode: uniform, left-right, top-botto
 A threshold is added to avoid switching to be accidentally activated. This can be changed based on user's habit. For bi-directional switching modes, this threshold is the difference between two groups of sensors.<br>
 To provide a smooth control, we mapped the force to the switching speed as shown in the figure below. Thus, if user is trying to hard press the mouse, the switching speed is increased exponentially.<br>
 <div style="text-align:center">
-  <img src="https://liangch0505.github.io/images/c667_Software_StackedWindows_SwitchingSpeed.png" /><br>
+  <img src="https://liangch0505.github.io/images/c667_Software_StackedWindows_SwitchingSpeed.png" /><br><br>
   <i>Smaller force for precise control. Larger force for fast switching (because user's purpose is very obvious).</i>
-</div>. 
+</div>
+<br>
 All implementation is done with Python. Two packages are used for achieving functionality:
 
 * Pyfirmata: For communication between Python and Arduino
