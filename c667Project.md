@@ -17,7 +17,7 @@ Many human-computer interaction techniques - such as mouse and user interfaces -
 ## Hardware Configuration
 4 film pressure resistors are attached to each corner of the mouse, with each one sensing force from 0N to ~20N. All sensors are connected to computer via Arduino. Detailed circuit is as the following:
 <div style="text-align:center">
-  <img src="https://liangch0505.github.io/images/c667_Circuit.png" />
+  <img src="https://liangch0505.github.io/images/c667_Circuit.png" /><br>
   <i>Detailed Circuit: four force sensors are in the top of the figure.</i>
 </div>. 
 ## Software Implementation Detail
@@ -28,7 +28,7 @@ This program supports 4 different switching mode: uniform, left-right, top-botto
 A threshold is added to avoid switching to be accidentally activated. This can be changed based on user's habit. For bi-directional switching modes, this threshold is the difference between two groups of sensors.<br>
 To provide a smooth control, we mapped the force to the switching speed as shown in the figure below. Thus, if user is trying to hard press the mouse, the switching speed is increased exponentially.<br>
 <div style="text-align:center">
-  <img src="https://liangch0505.github.io/images/c667_Software_StackedWindows_SwitchingSpeed.png" />
+  <img src="https://liangch0505.github.io/images/c667_Software_StackedWindows_SwitchingSpeed.png" /><br>
   <i>Smaller force for precise control. Larger force for fast switching (because user's purpose is very obvious).</i>
 </div>. 
 All implementation is done with Python. Two packages are used for achieving functionality:
