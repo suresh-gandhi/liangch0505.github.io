@@ -4,9 +4,11 @@ Chen Liang, Suresh Gandhi
 Many human-computer interaction techniques - such as mouse and user interfaces - are designed in 2D space. While this could be an easy and intuitive way to interact, a drawback of this design idea is the increasing difficulty of interacting as more and more windows are opened. This project proposed an idea to mitigate this issue: several force sensors are attached to the bottom of the mouse to provide an additional degree of freedom. Some user interfaces are also brought to '3D' space to utilize the much expanded space. The aim is to increase the interaction efficiency and provide more space for storing user interfaces, while keep everything easy to use and reduce the cost of learning for users. By doing so, user could still interact in a familiar way with similar user interfaces, with just a minor change.
 <div style="text-align:center">
   <img src="https://liangch0505.github.io/images/c667_Motivation1.png" />
-  <img src="https://liangch0505.github.io/images/c667_Motivation2.png" />
+</div>.
+<div style="text-align:center">
+  <img src="https://liangch0505.github.io/images/c667_Motivation2.png" /><br>
   <i>When too many windows opened, it's very hard to select the one you want, or interact between two different windows.</i>
-</div>. 
+</div>.
 ## Characteristics
 <b>Low learning cost: </b>  No fancy 3D effect. No additional interaction devices. User still uses mouse to interact with similar user interfaces, just have to press the mouse and realize that interfaces are stacked together.
 <b>Low deployment cost: </b> Each sensor costs $2 only. Software can be directly used on Windows systems.
@@ -33,8 +35,9 @@ All implementation is done with Python. Two packages are used for achieving func
 
 * Pyfirmata: For communication between Python and Arduino
 * Pywinauto and win32gui: Automate window control (change focus, position, size, etc)
-<br>
-Demo Videos:
+
+<br><br>
+<b>Demo Videos:</b>
 
 * Basic Switching: [Youtube](https://www.youtube.com/watch?v=yk7EaKMPcWo)
 * Drag and drop files while switching: [Youtube](https://www.youtube.com/watch?v=7OA2kFTEiaA)
