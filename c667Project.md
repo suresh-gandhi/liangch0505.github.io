@@ -13,7 +13,12 @@ Many human-computer interaction techniques - such as mouse and user interfaces -
 <b>Low learning cost: </b>  No fancy 3D effect. No additional interaction devices. User still uses mouse to interact with similar user interfaces, just have to press the mouse and realize that interfaces are stacked together.
 <b>Low deployment cost: </b> Each sensor costs $2 only. Software can be directly used on Windows systems.
 <b>Effective: </b> Interaction can be easier and faster, especially in situations where many windows are opened.
-## Gallery 
+## Images of the Mouse
+<div style="text-align:center">
+  <img src="https://liangch0505.github.io/images/c667_Mouse1.jpg" /><br>
+  <img src="https://liangch0505.github.io/images/c667_Mouse2.jpg" /><br>
+  <i>Detailed Circuit: four force sensors are in the top of the figure.</i>
+</div>
 ## Hardware Configuration
 4 film pressure resistors are attached to each corner of the mouse, with each one sensing force from 0N to ~20N. All sensors are connected to computer via Arduino. Detailed circuit is as the following:
 <div style="text-align:center">
