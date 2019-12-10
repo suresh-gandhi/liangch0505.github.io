@@ -17,8 +17,8 @@ Many human-computer interaction techniques - such as mouse and user interfaces -
 <div style="text-align:center">
   <img src="https://liangch0505.github.io/images/c667_Mouse1.jpg" /><br>
   <img src="https://liangch0505.github.io/images/c667_Mouse2.jpg" /><br>
-  <i>Detailed Circuit: four force sensors are in the top of the figure.</i>
 </div>
+
 ## Hardware Configuration
 4 film pressure resistors are attached to each corner of the mouse, with each one sensing force from 0N to ~20N. All sensors are connected to computer via Arduino. Detailed circuit is as the following:
 <div style="text-align:center">
