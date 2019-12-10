@@ -49,7 +49,22 @@ All implementation is done with Python. Two packages are used for achieving func
 * Drag and drop files while switching: [Youtube](https://www.youtube.com/watch?v=7OA2kFTEiaA)
 
 ### Games
-TODO
+#### Description:
+Using pressure sensor interface could also help drastically improve the player experience in a variety of different game genres (Shooting, Action, Exergames and even VR). A use case, which was implemented in this project, was inspired from the Slip Way game of the Reality Show - Takeshi's Castle ([Video](https://www.youtube.com/watch?v=TOM-IGaI-7k&t=25s)). We thought it would be better to simulate the pushing aspect of the game using readings which are directly mapped to the pressure exerted by the user on the sensor and therefore implemented the same way of accomplishing it. This is better when we compare it with the traditional way of achieving this using power meters, which kind of forces the user to lay his focus on the timing rather than the power which in turn is somewhat non-intuitive. So for the project we made a slip-way clone game (named slippo). The winning rule is to push the block to make it land as far as possible making sure it doesn't fall into the pit. The force exerted on the block is proportional to the pressure exerted by the user. We also use a key (space) as a delimiter and a signal for intaking the readings at the right time. A demo of this game is [here](https://www.youtube.com/watch?v=cPDtPJsbbAM). For simplicity and demonstration we have used the standard Unity assets. For embellishment we can use the custom assets from the Asset Store just to make it visually pleasing.
+
+#### Implementation:
+We have used Unity game engine to make this game. This was primarily because:
+1. Unity has a powerful physics engine embedded and our game uses physics.
+2. Good documentation and responsive community.
+
+
+While creating the game we embedded the code correctly in appropriate game lifecycle methods:
+* Start - For Initialization  and setting up Serial Connection Interface with the Arduino
+* Update - For taking in the pressure sensing mouse input
+* Fixed Update - For handling the game physics
+* Apart from this, we also had to configure the preferences initially to include the latest .NET version for access to updated System.IO library, which is  required for establishing communication between the engine and arduino
+
+
 ## How it works
 ### For Stacked Windows:
 Imagine if you are working on a large project. You have many folders opened and all of them are important so you cannot close them. You also have many web pages opened for reference. Besides, you are also working with many arduino files, and they are opened in separate windows. At this time, there are some difficulties to interact with these windows: first, it is very hard to drag one file from one folder to another, because you have to firstly find those two windows among a number of opened folders, and then you have to move them to correct positions (i.e. not overlapped so that you can drag files), and this can take a considerable amount of time; second, with many web pages opened, each web page has a very small tab and you cannot see the title of each very well, and you also have a higher chance to accidentally close one of them - because close button takes half of the space of the tab. <br>
