@@ -69,7 +69,23 @@ While creating the game we embedded the code correctly in appropriate game lifec
 ### For Stacked Windows:
 Imagine if you are working on a large project. You have many folders opened and all of them are important so you cannot close them. You also have many web pages opened for reference. Besides, you are also working with many arduino files, and they are opened in separate windows. At this time, there are some difficulties to interact with these windows: first, it is very hard to drag one file from one folder to another, because you have to firstly find those two windows among a number of opened folders, and then you have to move them to correct positions (i.e. not overlapped so that you can drag files), and this can take a considerable amount of time; second, with many web pages opened, each web page has a very small tab and you cannot see the title of each very well, and you also have a higher chance to accidentally close one of them - because close button takes half of the space of the tab. <br>
 With the solution proposed in this project, all these windows will be grouped into only three windows: folders, webpages, and Arduino IDE. User can still view any window he/she wants by just pressing the mouse on the corresponding window to switch, and there are even extra space left for other applications as well. In this scenario, the efficiency can be much improved, as user can easily achieve some interaction among these well-organized windows with some very simple methods, such as pressing the mouse.
+
+
+### For Slippo Game:
+The working of the game is simple and intuitive. The user just assigns one of the pressure sensors prior to the game for mapping his readings and give appropriate permissions. Once the game begins, he has to press the pressure sensor appropriately taking into consideration the game level/distance to the optimal zone. After he pressing to the correct prospective point he presses the space key. This is just for signalling to the program to take in the correct set of readings appropriately. The game can be played iteratively using the restart button just to develop a feel of the game and kind of reinforce himself.
+A [Demo Video](https://www.youtube.com/watch?v=cPDtPJsbbAM) of the game is linked to see it in action. Another thing worth mentioning is that the arduino readings of the pressure sensor (1 to 1023) are mapped to 10 different power zones, linearly,  in our game just to make it easier for the user to play. We could definitely increase the number of zones based upon the complexity of the level and as the user advances further into the game.
+
 ## Implementation Challenges
 
 * Bottom of mouse may not be flat, causing some sensors not being pressed. A (Temporary) Solution: add a soft pad below each sensor
 * Serial Communication lag. Possible Solution: Get better hardware apparatus
+
+## Future Work
+* Make hardware assembly more portable and handy.
+* Change the connection from wired to wireless 
+* Adding sensitivity customization in the game and giving the option to the use based on his preferences.
+* Support other programs/games:
+  * Photoshop, Camera control for 3D design software, etc
+  * Games  - FIFA Penalty Shootouts
+  * VR applications - Sensors could be attached to the shoe bottom and interfaced (eg. exergames)
+
